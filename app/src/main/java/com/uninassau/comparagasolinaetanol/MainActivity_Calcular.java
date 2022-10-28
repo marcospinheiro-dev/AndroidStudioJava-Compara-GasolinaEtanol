@@ -1,5 +1,6 @@
 package com.uninassau.comparagasolinaetanol;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -23,6 +24,22 @@ public class MainActivity_Calcular extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        final TextView result = findViewById(R.id.textResultado);
+        CharSequence savedText = result.getText();
+        outState.putCharSequence(SAVED_TEXT2, savedText);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        final TextView result = findViewById(R.id.textResultado);
+        CharSequence savedText = savedInstanceState.getCharSequence(SAVED_TEXT2);
+        result.setText(savedText);
+    }
+
     @SuppressLint("WrongViewCast")
     public void comparar(View view) {
 
@@ -35,12 +52,12 @@ public class MainActivity_Calcular extends AppCompatActivity {
         Double valorResultado = valorEtanol/valorGasolina;
 
         if (valorResultado < 0.7) {
-            textResultado.setText("É melhor usar álcool.");
+            textResultado.setText("\n\n\nÉ melhor usar álcool.");
 //            textResultado.setBackgroundResource(Integer.parseInt(@drawable/etanol");
-            textResultado.setBackgroundColor(getResources().getColor(R.color.purple_200));
+//            textResultado.setBackgroundColor(getResources().getColor(R.color.purple_200));
         }else{
-            textResultado.setText("É melhor usar gasolina.");
-            textResultado.setBackgroundColor(getResources().getColor(R.color.teal_700));
+            textResultado.setText("\n\n\nÉ melhor usar gasolina.");
+//            textResultado.setBackgroundColor(getResources().getColor(R.color.teal_700));
 //            textResultado.setBackground(getDrawable(Integer.parseInt("@drawable/gasolina")));
         }
 
