@@ -22,7 +22,7 @@
             android:id="@+id/inputGasolina"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:hint="Gasolina"
+            android:hint="Valor da gasolina"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +71,7 @@
             android:id="@+id/inputEtanol"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:hint="Etanol"
+            android:hint="Valor do etanol"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
