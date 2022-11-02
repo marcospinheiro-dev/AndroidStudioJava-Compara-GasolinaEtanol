@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.uninassau.comparagasolinaetanol.R;
 
 public class MainActivity_Calcular extends AppCompatActivity {
 
