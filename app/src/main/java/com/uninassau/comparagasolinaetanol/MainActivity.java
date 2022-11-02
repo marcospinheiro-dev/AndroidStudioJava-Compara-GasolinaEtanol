@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonContinuar = (Button)findViewById(R.id.buttonContinuar);
 
-        buttonContinuar.setOnClickListener(new OnClickListener() {
+        buttonContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, MainActivity_Calcular.class);

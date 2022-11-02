@@ -9,13 +9,14 @@
 
     <Button
         android:id="@+id/buttonContinuar"
-        android:layout_width="202dp"
-        android:layout_height="53dp"
-        android:backgroundTint="@color/purple_200"
-        android:text="clic e descubra"
+        android:layout_width="148dp"
+        android:layout_height="68dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="clique e descubra"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:cornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
